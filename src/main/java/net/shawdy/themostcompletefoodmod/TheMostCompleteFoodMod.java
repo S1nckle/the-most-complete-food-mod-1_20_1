@@ -32,9 +32,9 @@ import org.slf4j.Logger;
 @Mod(TheMostCompleteFoodMod.MOD_ID)
 public class TheMostCompleteFoodMod
 {
-    // Define mod id in a common place for everything to reference
+
     public static final String MOD_ID = "tmcfm";
-    // Directly reference a slf4j logger
+
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public TheMostCompleteFoodMod(FMLJavaModLoadingContext context)
