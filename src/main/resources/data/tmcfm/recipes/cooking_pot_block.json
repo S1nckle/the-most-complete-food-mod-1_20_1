@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "tag": "minecraft:buttons"
+    },
+    "I": {
+      "tag": "forge:ingots/iron"
+    },
+    "U": {
+      "item": "minecraft:bucket"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "pattern": [
+    "BWB",
+    "IUI",
+    " I "
+  ],
+  "result": {
+    "item": "tmcfm:cooking_pot_block"
+  }
+}

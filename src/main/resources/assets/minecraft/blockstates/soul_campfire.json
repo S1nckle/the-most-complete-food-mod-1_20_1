@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=east,lit=false,supportable_placed=false": {
+      "model": "minecraft:block/campfire_off",
+      "y": 270
+    },
+    "facing=east,lit=true,supportable_placed=false": {
+      "model": "minecraft:block/soul_campfire",
+      "y": 270
+    },
+    "facing=north,lit=false,supportable_placed=false": {
+      "model": "minecraft:block/campfire_off",
+      "y": 180
+    },
+    "facing=north,lit=true,supportable_placed=false": {
+      "model": "minecraft:block/soul_campfire",
+      "y": 180
+    },
+    "facing=south,lit=false,supportable_placed=false": {
+      "model": "minecraft:block/campfire_off"
+    },
+    "facing=south,lit=true,supportable_placed=false": {
+      "model": "minecraft:block/soul_campfire"
+    },
+    "facing=west,lit=false,supportable_placed=false": {
+      "model": "minecraft:block/campfire_off",
+      "y": 90
+    },
+    "facing=west,lit=true,supportable_placed=false": {
+      "model": "minecraft:block/soul_campfire",
+      "y": 90
+    },
+    "facing=east,lit=false,supportable_placed=true": {
+      "model": "minecraft:block/campfire_off_supported",
+      "y": 270
+    },
+    "facing=east,lit=true,supportable_placed=true": {
+      "model": "minecraft:block/soul_campfire_supported",
+      "y": 270
+    },
+    "facing=north,lit=false,supportable_placed=true": {
+      "model": "minecraft:block/campfire_off_supported",
+      "y": 180
+    },
+    "facing=north,lit=true,supportable_placed=true": {
+      "model": "minecraft:block/soul_campfire_supported",
+      "y": 180
+    },
+    "facing=south,lit=false,supportable_placed=true": {
+      "model": "minecraft:block/campfire_off_supported"
+    },
+    "facing=south,lit=true,supportable_placed=true": {
+      "model": "minecraft:block/soul_campfire_supported"
+    },
+    "facing=west,lit=false,supportable_placed=true": {
+      "model": "minecraft:block/campfire_off_supported",
+      "y": 90
+    },
+    "facing=west,lit=true,supportable_placed=true": {
+      "model": "minecraft:block/soul_campfire_supported",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "minecraft:apple": {
+    "carbohydrates": 2,
+    "fiber": 2.4,
+    "vitamins": 3,
+    "water": 6
+  },
+  "minecraft:baked_potato": {
+    "carbohydrates": 5,
+    "proteins": 1,
+    "minerals": 1
+  },
+  "minecraft:beef": {
+    "proteins": 4,
+    "fats": 3,
+    "minerals": 2
+  },
+  "minecraft:beetroot": {
+    "carbohydrates": 3,
+    "fiber": 2.8,
+    "minerals": 1,
+    "vitamins": 3
+  },
+  "minecraft:beetroot_soup": {
+    "carbohydrates": 8,
+    "fiber": 3.2,
+    "vitamins": 4,
+    "water": 7
+  },
+  "minecraft:bread": {
+    "carbohydrates": 5,
+    "fiber": 0.5
+  },
+  "minecraft:carrot": {
+    "carbohydrates": 2,
+    "fiber": 2.8,
+    "minerals": 1,
+    "vitamins": 4
+  },
+  "minecraft:chicken": {
+    "proteins": 4,
+    "fats": 2,
+    "minerals": 2
+  },
+  "minecraft:chorus_fruit": {
+    "carbohydrates": 4,
+    "fiber": 2.8,
+    "water": 3
+  },
+  "minecraft:cod": {
+    "proteins": 3,
+    "fats": 0.5,
+    "minerals": 1
+  },
+  "minecraft:cooked_beef": {
+    "proteins": 6,
+    "fats": 4,
+    "minerals": 4
+  },
+  "minecraft:cooked_chicken": {
+    "proteins": 6,
+    "fats": 3,
+    "minerals": 3
+  },
+  "minecraft:cooked_cod": {
+    "proteins": 5,
+    "fats": 1,
+    "minerals": 3
+  },
+  "minecraft:cooked_mutton": {
+    "proteins": 6,
+    "fats": 4,
+    "minerals": 3
+  },
+  "minecraft:cooked_porkchop": {
+    "proteins": 6,
+    "fats": 5,
+    "minerals": 3
+  },
+  "minecraft:cooked_rabbit": {
+    "proteins": 6,
+    "fats": 3,
+    "minerals": 3
+  },
+  "minecraft:cooked_salmon": {
+    "proteins": 5,
+    "fats": 2,
+    "minerals": 3
+  },
+  "minecraft:cookie": {
+    "carbohydrates": 6,
+    "fats": 4
+  },
+  "minecraft:dried_kelp": {
+    "carbohydrates": 1,
+    "fiber": 0.6,
+    "minerals": 2,
+    "vitamins": 1
+  },
+  "minecraft:enchanted_golden_apple": {
+    "carbohydrates": 7,
+    "fiber": 2,
+    "minerals": 10,
+    "vitamins": 10,
+    "water": 2
+  },
+  "minecraft:glow_berries": {
+    "carbohydrates": 6,
+    "fiber": 0.7,
+    "vitamins": 3,
+    "water": 3
+  },
+  "minecraft:golden_apple": {
+    "carbohydrates": 5,
+    "fiber": 2,
+    "minerals": 8,
+    "vitamins": 8,
+    "water": 2
+  },
+  "minecraft:golden_carrot": {
+    "carbohydrates": 7,
+    "fiber": 1.7,
+    "minerals": 6,
+    "vitamins": 6
+  },
+  "minecraft:honey_bottle": {
+    "carbohydrates": 10,
+    "fats": 3,
+    "water": 5
+  },
+  "minecraft:melon_slice": {
+    "carbohydrates": 6,
+    "fiber": 1.7,
+    "water": 9
+  },
+  "minecraft:milk_bucket": {
+    "proteins": 6,
+    "fats": 9,
+    "water": 15
+  },
+  "minecraft:mushroom_stew": {
+    "carbohydrates": 6,
+    "fiber": 1.5,
+    "water": 8
+  },
+  "minecraft:mutton": {
+    "proteins": 3,
+    "fats": 2,
+    "minerals": 2
+  },
+  "minecraft:poisonous_potato": {
+    "fiber": 0.5,
+    "carbohydrates": 2
+  },
+  "minecraft:porkchop": {
+    "proteins": 4,
+    "fats": 4,
+    "minerals": 2
+  },
+  "minecraft:potato": {
+    "carbohydrates": 4,
+    "minerals": 1
+  },
+  "minecraft:pufferfish": {
+    "proteins": 1
+  },
+  "minecraft:pumpkin_pie": {
+    "carbohydrates": 8,
+    "fats": 3
+  },
+  "minecraft:rabbit": {
+    "proteins": 4,
+    "fats": 2,
+    "minerals": 2
+  },
+  "minecraft:rabbit_stew": {
+    "proteins": 12,
+    "carbohydrates": 10,
+    "fats": 3,
+    "minerals": 4,
+    "water": 5
+  },
+  "minecraft:rotten_flesh": {
+    "proteins": 1.3,
+    "minerals": 1.5
+  },
+  "minecraft:salmon": {
+    "proteins": 4,
+    "fats": 2,
+    "minerals": 2
+  },
+  "minecraft:spider_eye": {
+    "proteins": 2
+  },
+  "minecraft:suspicious_stew": {
+    "carbohydrates": 8,
+    "fiber": 1,
+    "water": 8
+  },
+  "minecraft:sweet_berries": {
+    "carbohydrates": 5,
+    "vitamins": 2,
+    "water": 3
+  },
+  "minecraft:tropical_fish": {
+    "proteins": 4,
+    "fats": 2,
+    "minerals": 1
+  },
+  "minecraft:potion": {
+    "water": 10
+  },
+
+  "tmcfm:water_bowl": {
+    "water": 10
+  },
+  "tmcfm:leather_flask": {
+    "water": 10
+  },
+  "tmcfm:copper_flask": {
+    "water": 10
+  },
+  "tmcfm:iron_flask": {
+    "water": 10
+  },
+  "tmcfm:golden_flask": {
+    "water": 10
+  },
+  "tmcfm:diamond_flask": {
+    "water": 10
+  },
+  "tmcfm:netherite_flask": {
+    "water": 10
+  },
+  "tmcfm:caramel_apple": {
+    "fats": 2,
+    "carbohydrates": 6,
+    "fiber": 1.5,
+    "vitamins": 3,
+    "water": 4
+  }
+}

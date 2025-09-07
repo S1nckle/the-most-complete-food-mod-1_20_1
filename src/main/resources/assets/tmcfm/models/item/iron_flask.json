@@ -1,0 +1,16 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tmcfm:item/iron_flask"
+  },
+  "overrides": [
+    {
+      "predicate": { "damage": 0.0 },
+      "model": "tmcfm:item/water_iron_flask"
+    },
+    {
+      "predicate": { "damage": 1.0 },
+      "model": "tmcfm:item/iron_flask"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "tag": "forge:rods/wooden"
+    },
+    "I": {
+      "tag": "forge:ingots/iron"
+    },
+    "U": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "pattern": [
+    " II",
+    " II",
+    "S  "
+  ],
+  "result": {
+    "item": "tmcfm:cooking_pot_block"
+  }
+}
