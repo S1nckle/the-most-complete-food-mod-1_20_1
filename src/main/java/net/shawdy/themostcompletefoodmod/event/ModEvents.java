@@ -12,9 +12,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.shawdy.themostcompletefoodmod.TheMostCompleteFoodMod;
+import net.shawdy.themostcompletefoodmod.block.custom.CookingPotBlock;
 import net.shawdy.themostcompletefoodmod.client.ModKeyMappings;
 import net.shawdy.themostcompletefoodmod.client.renderers.CuttingBoardBlockRenderer;
 import net.shawdy.themostcompletefoodmod.client.renderers.FryingPanBlockRenderer;
+import net.shawdy.themostcompletefoodmod.client.screen.CookingPotBlockEntityMenuScreen;
 import net.shawdy.themostcompletefoodmod.diet.FoodDietValuesManager;
 import net.shawdy.themostcompletefoodmod.init.ModBlockEntities;
 import net.shawdy.themostcompletefoodmod.init.ModMenuTypes;
@@ -53,6 +55,8 @@ public class ModEvents {
         BlockEntityRenderers.register(ModBlockEntities.FRYING_PAN_BE.get(), FryingPanBlockRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.CUTTING_BOARD_BE.get(), CuttingBoardBlockRenderer::new);
 
+        // register menus
+        MenuScreens.register(ModMenuTypes.COOKING_POT_MENU.get(), CookingPotBlockEntityMenuScreen::new);
     }
 
 }

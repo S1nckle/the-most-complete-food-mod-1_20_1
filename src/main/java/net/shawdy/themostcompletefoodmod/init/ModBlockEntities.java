@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.shawdy.themostcompletefoodmod.TheMostCompleteFoodMod;
+import net.shawdy.themostcompletefoodmod.block.entity.CookingPotBlockEntity;
 import net.shawdy.themostcompletefoodmod.block.entity.CuttingBoardBlockEntity;
 import net.shawdy.themostcompletefoodmod.block.entity.FryingPanBlockEntity;
 
@@ -20,7 +21,10 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("cutting_board_block_entity", () -> BlockEntityType.Builder.of(
                     CuttingBoardBlockEntity::new,
                     ModBlocks.CUTTING_BOARD.get()).build(null));
-
+    public static final RegistryObject<BlockEntityType<CookingPotBlockEntity>> COOKING_POT_BE =
+            BLOCK_ENTITIES.register("cooking_pot_block_entity", () -> BlockEntityType.Builder.of(
+                    CookingPotBlockEntity::new,
+                    ModBlocks.COOKING_POT.get()).build(null));
 
     public static void register(IEventBus pEventBus) {
         BLOCK_ENTITIES.register(pEventBus);
