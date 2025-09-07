@@ -6,11 +6,14 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraftforge.items.SlotItemHandler;
 import net.shawdy.themostcompletefoodmod.block.entity.CookingPotBlockEntity;
 import net.shawdy.themostcompletefoodmod.init.ModBlocks;
 import net.shawdy.themostcompletefoodmod.init.ModMenuTypes;
+import org.jetbrains.annotations.NotNull;
 
 public class CookingPotBlockEntityMenu extends AbstractContainerMenu {
     public final CookingPotBlockEntity be;
@@ -26,10 +29,51 @@ public class CookingPotBlockEntityMenu extends AbstractContainerMenu {
         this.be = (CookingPotBlockEntity) be;
         this.level = pInventory.player.level();
         this.containerData = pContainerData;
-
+        
+        createBlockInventory(((CookingPotBlockEntity) be));
         createPlayerInventory(pInventory);
         createPlayerHotbar(pInventory);
         addDataSlots(containerData);
+    }
+
+    private void createBlockInventory(CookingPotBlockEntity be) {
+        be.getInventoryCapability().ifPresent(inventory -> {
+            int id = 0;
+            addSlot(new SlotItemHandler(inventory, id++, 28, 17));
+            addSlot(new SlotItemHandler(inventory, id++, 46, 17));
+            addSlot(new SlotItemHandler(inventory, id++, 64, 17));
+            addSlot(new SlotItemHandler(inventory, id++, 28, 35));
+            addSlot(new SlotItemHandler(inventory, id++, 46, 35));
+            addSlot(new SlotItemHandler(inventory, id++, 64, 35));
+
+            addSlot(new SlotItemHandler(inventory, id++, 123, 25) {
+                @Override
+                public boolean mayPlace(@NotNull ItemStack stack) {
+                    return false;
+                }
+
+                @Override
+                public boolean mayPickup(Player playerIn) {
+                    return false;
+                }
+            });
+            addSlot(new SlotItemHandler(inventory, id++, 91, 54) {
+                @Override
+                public boolean mayPlace(@NotNull ItemStack stack) {
+                    return CookingPotBlockEntityMenu.this.isPlate(stack);
+                }
+            });
+            addSlot(new SlotItemHandler(inventory, id++, 123, 54) {
+                @Override
+                public boolean mayPlace(@NotNull ItemStack stack) {
+                    return false;
+                }
+            });
+        });
+    }
+
+    private boolean isPlate(@NotNull ItemStack stack) {
+        return stack.is(Items.BOWL);
     }
 
     private void createPlayerInventory(Inventory playerInv) {

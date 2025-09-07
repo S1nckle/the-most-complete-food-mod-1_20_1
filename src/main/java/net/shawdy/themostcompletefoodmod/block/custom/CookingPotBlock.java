@@ -106,7 +106,7 @@ public class CookingPotBlock extends Block implements EntityBlock{
         }
     }
 
-    private boolean isHeat(Level pLevel, BlockPos pPos) {
+    public static boolean isHeat(Level pLevel, BlockPos pPos) {
         BlockState blockBelow = pLevel.getBlockState(pPos);
         if (blockBelow.is(Blocks.CAMPFIRE) || blockBelow.is(Blocks.SOUL_CAMPFIRE)) {
             return blockBelow.getValue(CampfireBlock.LIT);
@@ -139,7 +139,6 @@ public class CookingPotBlock extends Block implements EntityBlock{
                 NetworkHooks.openScreen(((ServerPlayer) pPlayer), pot, pPos);
             }
         }
-
-        return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
+        return InteractionResult.CONSUME;
     }
 }

@@ -11,6 +11,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -19,6 +20,7 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.ItemStackHandler;
+import net.shawdy.themostcompletefoodmod.block.custom.CookingPotBlock;
 import net.shawdy.themostcompletefoodmod.client.menus.CookingPotBlockEntityMenu;
 import net.shawdy.themostcompletefoodmod.init.ModBlockEntities;
 import org.jetbrains.annotations.NotNull;
@@ -75,6 +77,10 @@ public class CookingPotBlockEntity extends BlockEntity implements MenuProvider {
         return super.getCapability(cap);
     }
 
+    public LazyOptional<ItemStackHandler> getInventoryCapability() {
+        return inventoryCapability;
+    }
+
     @Override
     public void invalidateCaps() {
         inventoryCapability.invalidate();
@@ -105,6 +111,13 @@ public class CookingPotBlockEntity extends BlockEntity implements MenuProvider {
             Containers.dropItemStack(level, worldPosition.getX(),
                     worldPosition.getY(), worldPosition.getZ(), inventory.getStackInSlot(i));
         }
+    }
+
+    public boolean isHeat() {
+        if (level != null) {
+            return CookingPotBlock.isHeat(level, worldPosition);
+        }
+        return false;
     }
 
     @Override

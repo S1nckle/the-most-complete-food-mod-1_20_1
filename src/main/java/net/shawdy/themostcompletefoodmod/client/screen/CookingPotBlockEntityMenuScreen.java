@@ -8,6 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.shawdy.themostcompletefoodmod.TheMostCompleteFoodMod;
+import net.shawdy.themostcompletefoodmod.block.entity.CookingPotBlockEntity;
 import net.shawdy.themostcompletefoodmod.client.menus.CookingPotBlockEntityMenu;
 
 public class CookingPotBlockEntityMenuScreen extends AbstractContainerScreen<CookingPotBlockEntityMenu> {
@@ -15,8 +16,11 @@ public class CookingPotBlockEntityMenuScreen extends AbstractContainerScreen<Coo
     private int leftPos, topPos;
     private static final ResourceLocation TEXTURE =
             new ResourceLocation(TheMostCompleteFoodMod.MOD_ID, "textures/gui/cooking_pot_block_container.png");
+    private final CookingPotBlockEntity blockEntity;
+
     public CookingPotBlockEntityMenuScreen(CookingPotBlockEntityMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
+        blockEntity = pMenu.be;
     }
 
     @Override
@@ -34,8 +38,15 @@ public class CookingPotBlockEntityMenuScreen extends AbstractContainerScreen<Coo
     public void render(GuiGraphics pGuiGraphics, int pMouseX, int pMouseY, float pPartialTick) {
         renderBackground(pGuiGraphics);
         super.render(pGuiGraphics, pMouseX, pMouseY, pPartialTick);
+        pGuiGraphics.blit(TEXTURE, this.leftPos + 47, this.topPos + 54, 176, 0, 14,12);
         renderTooltip(pGuiGraphics, pMouseX, pMouseY);
     }
+
+//    private void renderIcons(GuiGraphics pGuiGraphics) {
+//        if (blockEntity.isHeat()) {
+//
+//        }
+//    }
 
     @Override
     protected void renderBg(GuiGraphics pGuiGraphics, float pPartialTick, int pMouseX, int pMouseY) {
