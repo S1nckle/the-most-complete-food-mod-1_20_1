@@ -65,7 +65,7 @@ public class CookingPotBlock extends Block implements EntityBlock{
 
     @Override
     public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
-        if (isHeat(pLevel, pPos.below()) && pLevel.isClientSide()) {
+        if (isHeat(pLevel, pPos) && pLevel.isClientSide()) {
             spawnSteamParticles(pLevel, pPos, pRandom);
         }
     }
@@ -107,7 +107,7 @@ public class CookingPotBlock extends Block implements EntityBlock{
     }
 
     public static boolean isHeat(Level pLevel, BlockPos pPos) {
-        BlockState blockBelow = pLevel.getBlockState(pPos);
+        BlockState blockBelow = pLevel.getBlockState(pPos.below());
         if (blockBelow.is(Blocks.CAMPFIRE) || blockBelow.is(Blocks.SOUL_CAMPFIRE)) {
             return blockBelow.getValue(CampfireBlock.LIT);
         }

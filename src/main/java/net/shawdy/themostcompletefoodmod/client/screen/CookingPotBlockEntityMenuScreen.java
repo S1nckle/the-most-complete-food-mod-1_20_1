@@ -38,15 +38,15 @@ public class CookingPotBlockEntityMenuScreen extends AbstractContainerScreen<Coo
     public void render(GuiGraphics pGuiGraphics, int pMouseX, int pMouseY, float pPartialTick) {
         renderBackground(pGuiGraphics);
         super.render(pGuiGraphics, pMouseX, pMouseY, pPartialTick);
-        pGuiGraphics.blit(TEXTURE, this.leftPos + 47, this.topPos + 54, 176, 0, 14,12);
+        renderIcons(pGuiGraphics);
         renderTooltip(pGuiGraphics, pMouseX, pMouseY);
     }
 
-//    private void renderIcons(GuiGraphics pGuiGraphics) {
-//        if (blockEntity.isHeat()) {
-//
-//        }
-//    }
+    private void renderIcons(GuiGraphics pGuiGraphics) {
+        if (blockEntity.isHeat()) {
+              pGuiGraphics.blit(TEXTURE, this.leftPos + 47, this.topPos + 54, 176, 0, 14,12);
+        }
+    }
 
     @Override
     protected void renderBg(GuiGraphics pGuiGraphics, float pPartialTick, int pMouseX, int pMouseY) {
