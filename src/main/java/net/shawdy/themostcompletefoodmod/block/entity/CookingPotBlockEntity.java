@@ -130,4 +130,10 @@ public class CookingPotBlockEntity extends BlockEntity implements MenuProvider {
         return new CookingPotBlockEntityMenu(pContainerId, pPlayerInventory, this, containerData);
     }
 
+    public void printPos() {
+        System.out.println(worldPosition.getX());
+        System.out.println(worldPosition.getY());
+        System.out.println(worldPosition.getZ());
+    }
+
 }

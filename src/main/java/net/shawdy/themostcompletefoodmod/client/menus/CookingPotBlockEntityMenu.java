@@ -5,6 +5,7 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
@@ -29,10 +30,10 @@ public class CookingPotBlockEntityMenu extends AbstractContainerMenu {
         this.be = (CookingPotBlockEntity) be;
         this.level = pInventory.player.level();
         this.containerData = pContainerData;
-        
-        createBlockInventory(((CookingPotBlockEntity) be));
-        createPlayerInventory(pInventory);
+
         createPlayerHotbar(pInventory);
+        createPlayerInventory(pInventory);
+        createBlockInventory(((CookingPotBlockEntity) be));
         addDataSlots(containerData);
     }
 
@@ -90,14 +91,37 @@ public class CookingPotBlockEntityMenu extends AbstractContainerMenu {
         }
     }
 
-
-    @Override
-    public ItemStack quickMoveStack(Player pPlayer, int pIndex) {
-        return null;
-    }
-
     @Override
     public boolean stillValid(Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, be.getBlockPos()), pPlayer, ModBlocks.COOKING_POT.get());
+    }
+
+    @Override
+    public ItemStack quickMoveStack(Player pPlayer, int pIndex) {
+        Slot sourceSlot = slots.get(pIndex);
+        ItemStack sourceStack = sourceSlot.getItem();
+        if (sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;
+        ItemStack copyOfSourceStack = sourceStack.copy();
+        if (pIndex < 36) {
+            if (isPlate(sourceStack)) {
+                moveItemStackTo(sourceStack, 43, 44, false);
+            }
+            if (!moveItemStackTo(sourceStack, 36, 42, false)) {
+                return ItemStack.EMPTY;
+            }
+        } else if (pIndex < 45) {
+            if (!moveItemStackTo(sourceStack, 0, 36, false)) {
+                return ItemStack.EMPTY;
+            }
+        }
+
+        if (sourceStack.getCount() == 0) {
+            sourceSlot.set(ItemStack.EMPTY);
+        } else {
+            sourceSlot.setChanged();
+        }
+
+        sourceSlot.onTake(pPlayer, sourceStack);
+        return copyOfSourceStack;
     }
 }
