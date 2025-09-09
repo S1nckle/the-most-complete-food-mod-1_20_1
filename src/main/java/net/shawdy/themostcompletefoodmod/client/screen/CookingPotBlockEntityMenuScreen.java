@@ -27,7 +27,7 @@ public class CookingPotBlockEntityMenuScreen extends AbstractContainerScreen<Coo
     protected void init() {
         super.init();
 
-        this.titleLabelY = 10000;
+//        this.titleLabelY = 10000;
         this.imageWidth = 176;
         this.imageHeight = 166;
         this.leftPos = (width - imageWidth) / 2;

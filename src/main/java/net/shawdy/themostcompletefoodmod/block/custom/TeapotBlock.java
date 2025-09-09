@@ -10,6 +10,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -17,9 +18,10 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.shawdy.themostcompletefoodmod.block.entity.TeaPotBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
-public class TeapotBlock extends Block {
+public class TeapotBlock extends Block implements EntityBlock {
 
     public TeapotBlock(Properties pProperties) {
         super(pProperties);
@@ -100,4 +102,8 @@ public class TeapotBlock extends Block {
         return false;
     }
 
+    @Override
+    public @Nullable BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
+        return new TeaPotBlockEntity(pPos, pState);
+    }
 }
