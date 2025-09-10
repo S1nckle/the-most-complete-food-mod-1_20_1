@@ -9,18 +9,19 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.shawdy.themostcompletefoodmod.TheMostCompleteFoodMod;
 import net.shawdy.themostcompletefoodmod.block.entity.CookingPotBlockEntity;
-import net.shawdy.themostcompletefoodmod.client.menus.CookingPotBlockEntityMenu;
+import net.shawdy.themostcompletefoodmod.block.entity.TeapotBlockEntity;
+import net.shawdy.themostcompletefoodmod.client.menus.TeapotBlockEntityMenu;
 
-public class CookingPotBlockEntityMenuScreen extends AbstractContainerScreen<CookingPotBlockEntityMenu> {
+public class TeapotBlockEntityMenuScreen extends AbstractContainerScreen<TeapotBlockEntityMenu> {
     private int imageWidth, imageHeight;
     private int leftPos, topPos;
     private static final ResourceLocation TEXTURE =
             new ResourceLocation(TheMostCompleteFoodMod.MOD_ID, "textures/gui/cooking_pot_block_container.png");
-    private final CookingPotBlockEntity blockEntity;
+    private final TeapotBlockEntity blockEntity;
 
-    public CookingPotBlockEntityMenuScreen(CookingPotBlockEntityMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
+    public TeapotBlockEntityMenuScreen(TeapotBlockEntityMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
-        blockEntity = pMenu.be;
+        this.blockEntity = ((TeapotBlockEntity) pMenu.blockEntity);
     }
 
     @Override
@@ -28,7 +29,6 @@ public class CookingPotBlockEntityMenuScreen extends AbstractContainerScreen<Coo
         super.init();
 
 //        this.titleLabelY = 10000;
-        this.titleLabelX = leftPos + 110;
         this.imageWidth = 176;
         this.imageHeight = 166;
         this.leftPos = (width - imageWidth) / 2;
@@ -40,18 +40,11 @@ public class CookingPotBlockEntityMenuScreen extends AbstractContainerScreen<Coo
     public void render(GuiGraphics pGuiGraphics, int pMouseX, int pMouseY, float pPartialTick) {
         renderBackground(pGuiGraphics);
         super.render(pGuiGraphics, pMouseX, pMouseY, pPartialTick);
-        renderIcons(pGuiGraphics);
         renderTooltip(pGuiGraphics, pMouseX, pMouseY);
     }
 
-    private void renderIcons(GuiGraphics pGuiGraphics) {
-        if (blockEntity.isHeat()) {
-              pGuiGraphics.blit(TEXTURE, this.leftPos + 47, this.topPos + 54, 176, 0, 14,12);
-        }
-    }
-
     @Override
-    protected void renderBg(GuiGraphics pGuiGraphics, float pPartialTick, int pMouseX, int pMouseY) {
+    protected void renderBg(GuiGraphics pGuiGraphics, float v, int i, int i1) {
         super.renderBackground(pGuiGraphics);
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0f, 1.0f, 1.0f, 1.0f);

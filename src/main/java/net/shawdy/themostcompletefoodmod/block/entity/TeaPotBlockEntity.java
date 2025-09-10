@@ -2,21 +2,27 @@ package net.shawdy.themostcompletefoodmod.block.entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.ItemStackHandler;
+import net.shawdy.themostcompletefoodmod.client.menus.TeapotBlockEntityMenu;
 import net.shawdy.themostcompletefoodmod.init.ModBlockEntities;
+import org.jetbrains.annotations.Nullable;
 
-public class TeaPotBlockEntity extends BlockEntity {
+public class TeapotBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler inventory = new ItemStackHandler(7) {
         @Override
         protected void onContentsChanged(int slot) {
             super.onContentsChanged(slot);
-            TeaPotBlockEntity.this.setChanged();
+            TeapotBlockEntity.this.setChanged();
             if (level != null && !level.isClientSide) {
                 level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), Block.UPDATE_ALL);
             }
@@ -26,7 +32,7 @@ public class TeaPotBlockEntity extends BlockEntity {
     private int cookingTime, cookingProgress;
     private final ContainerData containerData;
 
-    public TeaPotBlockEntity(BlockPos pPos, BlockState pBlockState) {
+    public TeapotBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.TEAPOT_BE.get(), pPos, pBlockState);
         containerData = new ContainerData() {
             @Override
@@ -83,5 +89,15 @@ public class TeaPotBlockEntity extends BlockEntity {
         inventory.deserializeNBT(pTag.getCompound("Inventory"));
         cookingProgress = pTag.getInt("CookingProgress");
         cookingTime = pTag.getInt("CookingTime");
+    }
+
+    @Override
+    public Component getDisplayName() {
+        return Component.translatable("block.tmcfm.teapot_block");
+    }
+
+    @Override
+    public @Nullable AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
+        return new TeapotBlockEntityMenu(i, inventory, this, this.containerData);
     }
 }
