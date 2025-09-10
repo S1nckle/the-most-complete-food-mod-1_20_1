@@ -72,7 +72,7 @@ public class FryingPanBlock extends Block implements EntityBlock {
 
     @Override
     public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
-        if (isHeat(pLevel, pPos.below()) && pLevel.isClientSide()) {
+        if (isHeat(pLevel, pPos) && pLevel.isClientSide()) {
             spawnSteamParticles(pLevel, pPos, pRandom);
         }
     }
@@ -91,7 +91,7 @@ public class FryingPanBlock extends Block implements EntityBlock {
     }
 
     public boolean isHeat(Level pLevel, BlockPos pPos) {
-        BlockState blockBelow = pLevel.getBlockState(pPos);
+        BlockState blockBelow = pLevel.getBlockState(pPos.below());
         if (blockBelow.is(Blocks.CAMPFIRE) || blockBelow.is(Blocks.SOUL_CAMPFIRE)) {
             return blockBelow.getValue(CampfireBlock.LIT);
         }
@@ -150,7 +150,7 @@ public class FryingPanBlock extends Block implements EntityBlock {
         if (!pLevel.isClientSide && pBlockEntityType == ModBlockEntities.FRYING_PAN_BE.get()) {
             return (level, pos, state, blockEntity) -> {
                 FryingPanBlockEntity pan = (FryingPanBlockEntity) blockEntity;
-                if (isHeat(level, pos.below())) {
+                if (isHeat(level, pos)) {
                     pan.cookTick(level, pos, state, pan);
                 } else {
                     pan.waitTick(level, pos, state, pan);

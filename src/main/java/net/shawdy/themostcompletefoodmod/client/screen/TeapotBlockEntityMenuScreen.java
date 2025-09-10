@@ -16,7 +16,7 @@ public class TeapotBlockEntityMenuScreen extends AbstractContainerScreen<TeapotB
     private int imageWidth, imageHeight;
     private int leftPos, topPos;
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(TheMostCompleteFoodMod.MOD_ID, "textures/gui/cooking_pot_block_container.png");
+            new ResourceLocation(TheMostCompleteFoodMod.MOD_ID, "textures/gui/teapot_block_container.png");
     private final TeapotBlockEntity blockEntity;
 
     public TeapotBlockEntityMenuScreen(TeapotBlockEntityMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
@@ -29,6 +29,7 @@ public class TeapotBlockEntityMenuScreen extends AbstractContainerScreen<TeapotB
         super.init();
 
 //        this.titleLabelY = 10000;
+        this.titleLabelX = leftPos + 110;
         this.imageWidth = 176;
         this.imageHeight = 166;
         this.leftPos = (width - imageWidth) / 2;
@@ -40,7 +41,14 @@ public class TeapotBlockEntityMenuScreen extends AbstractContainerScreen<TeapotB
     public void render(GuiGraphics pGuiGraphics, int pMouseX, int pMouseY, float pPartialTick) {
         renderBackground(pGuiGraphics);
         super.render(pGuiGraphics, pMouseX, pMouseY, pPartialTick);
+        renderIcons(pGuiGraphics);
         renderTooltip(pGuiGraphics, pMouseX, pMouseY);
+    }
+
+    private void renderIcons(GuiGraphics pGuiGraphics) {
+        if (blockEntity.isHeat()) {
+            pGuiGraphics.blit(TEXTURE, this.leftPos + 47, this.topPos + 54, 176, 0, 14,12);
+        }
     }
 
     @Override

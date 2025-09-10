@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.ItemStackHandler;
+import net.shawdy.themostcompletefoodmod.block.custom.TeapotBlock;
 import net.shawdy.themostcompletefoodmod.client.menus.TeapotBlockEntityMenu;
 import net.shawdy.themostcompletefoodmod.init.ModBlockEntities;
 import org.jetbrains.annotations.Nullable;
@@ -89,6 +90,13 @@ public class TeapotBlockEntity extends BlockEntity implements MenuProvider {
         inventory.deserializeNBT(pTag.getCompound("Inventory"));
         cookingProgress = pTag.getInt("CookingProgress");
         cookingTime = pTag.getInt("CookingTime");
+    }
+
+    public boolean isHeat() {
+        if (level != null) {
+            return TeapotBlock.isHeat(level, worldPosition);
+        }
+        return false;
     }
 
     @Override
