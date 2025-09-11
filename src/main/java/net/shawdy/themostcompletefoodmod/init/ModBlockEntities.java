@@ -6,10 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.shawdy.themostcompletefoodmod.TheMostCompleteFoodMod;
-import net.shawdy.themostcompletefoodmod.block.entity.CookingPotBlockEntity;
-import net.shawdy.themostcompletefoodmod.block.entity.CuttingBoardBlockEntity;
-import net.shawdy.themostcompletefoodmod.block.entity.FryingPanBlockEntity;
-import net.shawdy.themostcompletefoodmod.block.entity.TeapotBlockEntity;
+import net.shawdy.themostcompletefoodmod.block.entity.*;
 
 public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, TheMostCompleteFoodMod.MOD_ID);
@@ -30,6 +27,10 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("teapot_block_entity", () -> BlockEntityType.Builder.of(
                     TeapotBlockEntity::new,
                     ModBlocks.TEAPOT.get()).build(null));
+    public static final RegistryObject<BlockEntityType<MixingBowlBlockEntity>> MIXING_BOWL_BE =
+            BLOCK_ENTITIES.register("mixing_bowl_block_entity", () -> BlockEntityType.Builder.of(
+                    MixingBowlBlockEntity::new,
+                    ModBlocks.MIXING_BOWL.get()).build(null));
 
     public static void register(IEventBus pEventBus) {
         BLOCK_ENTITIES.register(pEventBus);
