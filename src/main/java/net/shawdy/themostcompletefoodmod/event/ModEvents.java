@@ -18,6 +18,7 @@ import net.shawdy.themostcompletefoodmod.client.menus.TeapotBlockEntityMenu;
 import net.shawdy.themostcompletefoodmod.client.renderers.CuttingBoardBlockRenderer;
 import net.shawdy.themostcompletefoodmod.client.renderers.FryingPanBlockRenderer;
 import net.shawdy.themostcompletefoodmod.client.screen.CookingPotBlockEntityMenuScreen;
+import net.shawdy.themostcompletefoodmod.client.screen.MixingBowlBLockEntityMenuScreen;
 import net.shawdy.themostcompletefoodmod.client.screen.TeapotBlockEntityMenuScreen;
 import net.shawdy.themostcompletefoodmod.diet.FoodDietValuesManager;
 import net.shawdy.themostcompletefoodmod.init.ModBlockEntities;
@@ -60,6 +61,7 @@ public class ModEvents {
         // register menus
         MenuScreens.register(ModMenuTypes.COOKING_POT_MENU.get(), CookingPotBlockEntityMenuScreen::new);
         MenuScreens.register(ModMenuTypes.TEAPOT_MENU.get(), TeapotBlockEntityMenuScreen::new);
+        MenuScreens.register(ModMenuTypes.MIXING_BOWL_MENU.get(), MixingBowlBLockEntityMenuScreen::new);
     }
 
 }

@@ -8,6 +8,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.shawdy.themostcompletefoodmod.TheMostCompleteFoodMod;
 import net.shawdy.themostcompletefoodmod.client.menus.CookingPotBlockEntityMenu;
+import net.shawdy.themostcompletefoodmod.client.menus.MixingBowlBlockEntityMenu;
 import net.shawdy.themostcompletefoodmod.client.menus.TeapotBlockEntityMenu;
 
 public class ModMenuTypes {
@@ -18,6 +19,8 @@ public class ModMenuTypes {
             MENUS.register("cooking_pot_block_menu", () -> IForgeMenuType.create(CookingPotBlockEntityMenu::new));
     public static final RegistryObject<MenuType<TeapotBlockEntityMenu>> TEAPOT_MENU =
             MENUS.register("teapot_block_menu", () -> IForgeMenuType.create(TeapotBlockEntityMenu::new));
+    public static final RegistryObject<MenuType<MixingBowlBlockEntityMenu>> MIXING_BOWL_MENU =
+            MENUS.register("mixing_bowl_block_menu", () -> IForgeMenuType.create(MixingBowlBlockEntityMenu::new));
 
     public static void register(IEventBus eventBus) {
         MENUS.register(eventBus);
