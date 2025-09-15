@@ -21,7 +21,7 @@ public class C2SRequestDietContainerDataPacket {
     public void handle(Supplier<NetworkEvent.Context> pContext) {
         pContext.get().enqueueWork(() -> {
             ServerPlayer pPlayer = pContext.get().getSender();
-            byte[] data = ((IDietContainer) pPlayer.getFoodData()).the_most_complete_food_mod_1_20_1$getValuesFullness();
+            byte[] data = ((IDietContainer) pPlayer.getFoodData()).a_la_carte_1_20_1$getValuesFullness();
             NetworkHandler.sendToPlayer(pPlayer, new S2CSendDietContainerDataPacket(data));
         });
         pContext.get().setPacketHandled(true);

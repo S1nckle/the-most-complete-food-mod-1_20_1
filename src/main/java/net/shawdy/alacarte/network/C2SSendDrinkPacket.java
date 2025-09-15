@@ -46,9 +46,9 @@ public class C2SSendDrinkPacket {
                 }
             }
             if (pPlayer != null) {
-                ((IDietContainer) pPlayer.getFoodData()).the_most_complete_food_mod$increaseValue("water", 5.0f);
+                ((IDietContainer) pPlayer.getFoodData()).a_la_carte_1_20_1$increaseValue("water", 5.0f);
                 if(block.is(Blocks.WATER_CAULDRON))
-                    ((IDietContainer) pPlayer.getFoodData()).the_most_complete_food_mod$increaseValue("water", 5.0f);
+                    ((IDietContainer) pPlayer.getFoodData()).a_la_carte_1_20_1$increaseValue("water", 5.0f);
                 pPlayer.swing(InteractionHand.MAIN_HAND);
                 pPlayer.level().playSound(
                         null,

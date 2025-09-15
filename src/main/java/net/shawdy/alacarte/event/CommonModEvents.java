@@ -42,13 +42,13 @@ public class CommonModEvents {
         ResourceLocation pLocation = ForgeRegistries.ITEMS.getKey(pItem);
         DietValuesHolder data = FoodDietValuesManager.getData(pLocation);
         if (data != null) {
-            ((IDietContainer) pPlayer.getFoodData()).the_most_complete_food_mod$increaseValue("proteins", data.getProteins());
-            ((IDietContainer) pPlayer.getFoodData()).the_most_complete_food_mod$increaseValue("fats", data.getFats());
-            ((IDietContainer) pPlayer.getFoodData()).the_most_complete_food_mod$increaseValue("carbohydrates", data.getCarbohydrates());
-            ((IDietContainer) pPlayer.getFoodData()).the_most_complete_food_mod$increaseValue("fiber", data.getFiber());
-            ((IDietContainer) pPlayer.getFoodData()).the_most_complete_food_mod$increaseValue("minerals", data.getMinerals());
-            ((IDietContainer) pPlayer.getFoodData()).the_most_complete_food_mod$increaseValue("vitamins", data.getVitamins());
-            ((IDietContainer) pPlayer.getFoodData()).the_most_complete_food_mod$increaseValue("water", data.getWater());
+            ((IDietContainer) pPlayer.getFoodData()).a_la_carte_1_20_1$increaseValue("proteins", data.getProteins());
+            ((IDietContainer) pPlayer.getFoodData()).a_la_carte_1_20_1$increaseValue("fats", data.getFats());
+            ((IDietContainer) pPlayer.getFoodData()).a_la_carte_1_20_1$increaseValue("carbohydrates", data.getCarbohydrates());
+            ((IDietContainer) pPlayer.getFoodData()).a_la_carte_1_20_1$increaseValue("fiber", data.getFiber());
+            ((IDietContainer) pPlayer.getFoodData()).a_la_carte_1_20_1$increaseValue("minerals", data.getMinerals());
+            ((IDietContainer) pPlayer.getFoodData()).a_la_carte_1_20_1$increaseValue("vitamins", data.getVitamins());
+            ((IDietContainer) pPlayer.getFoodData()).a_la_carte_1_20_1$increaseValue("water", data.getWater());
         }
     }
 

@@ -68,7 +68,7 @@ public abstract class FoodDataMixin implements IDietContainer {
     private boolean shouldApplyPositiveEffects = CommonModConfig.ALLOW_POSITIVE.get();
 
 
-    public float the_most_complete_food_mod$getValue(String pId) {
+    public float a_la_carte$getValue(String pId) {
         return switch (pId) {
             case "proteins" -> this.proteins;
             case "fats" -> this.fats;
@@ -81,7 +81,7 @@ public abstract class FoodDataMixin implements IDietContainer {
         };
     }
 
-    public void the_most_complete_food_mod$setValue(String pId, float pValue) {
+    public void a_la_carte_1_20_1$setValue(String pId, float pValue) {
         switch (pId) {
             case "proteins":
                 this.proteins = pValue;
@@ -109,7 +109,7 @@ public abstract class FoodDataMixin implements IDietContainer {
         }
     }
 
-    public void the_most_complete_food_mod$increaseValue(String pId, float pValue) {
+    public void a_la_carte_1_20_1$increaseValue(String pId, float pValue) {
         switch (pId) {
             case "proteins":
                 this.proteins = Math.min(this.proteins + pValue, max_proteins);
@@ -138,19 +138,19 @@ public abstract class FoodDataMixin implements IDietContainer {
         }
     }
 
-    public byte[] the_most_complete_food_mod_1_20_1$getValuesFullness() {
+    public byte[] a_la_carte_1_20_1$getValuesFullness() {
         return new byte[]{
-                the_most_complete_food_mod_1_20_1$getFullness(proteins, max_proteins),
-                the_most_complete_food_mod_1_20_1$getFullness(fats, max_fats),
-                the_most_complete_food_mod_1_20_1$getFullness(carbohydrates, max_carbogydrates),
-                the_most_complete_food_mod_1_20_1$getFullness(fiber, max_fiber),
-                the_most_complete_food_mod_1_20_1$getFullness(minerals, max_minerals),
-                the_most_complete_food_mod_1_20_1$getFullness(vitamins, max_vitamins),
-                the_most_complete_food_mod_1_20_1$getFullness(water, max_water)
+                a_la_carte_1_20_1$getFullness(proteins, max_proteins),
+                a_la_carte_1_20_1$getFullness(fats, max_fats),
+                a_la_carte_1_20_1$getFullness(carbohydrates, max_carbogydrates),
+                a_la_carte_1_20_1$getFullness(fiber, max_fiber),
+                a_la_carte_1_20_1$getFullness(minerals, max_minerals),
+                a_la_carte_1_20_1$getFullness(vitamins, max_vitamins),
+                a_la_carte_1_20_1$getFullness(water, max_water)
         };
     }
 
-    public void the_most_complete_food_mod_1_20_1$resetDietContainer() {
+    public void a_la_carte_1_20_1$resetDietContainer() {
         this.proteins = 50.0f;
         this.fats = 50.0f;
         this.carbohydrates = 50.0f;
@@ -160,7 +160,7 @@ public abstract class FoodDataMixin implements IDietContainer {
         this.water = 100.0f;
     }
 
-    public void the_most_complete_food_mod_1_20_1$applyPenalty(float penalty) {
+    public void a_la_carte_1_20_1$applyPenalty(float penalty) {
         this.proteins = this.proteins > 50 ? this.proteins : Math.min(this.proteins + penalty, 50);
         this.fats = this.fats > 50 ? this.fats : Math.min(this.fats + penalty, 50);
         this.carbohydrates = this.carbohydrates > 50 ? this.carbohydrates : Math.min(this.carbohydrates + penalty, 50);
@@ -170,17 +170,17 @@ public abstract class FoodDataMixin implements IDietContainer {
     }
 
     @Unique
-    private byte the_most_complete_food_mod_1_20_1$getFullness(float value, float max_value) {
+    private byte a_la_carte_1_20_1$getFullness(float value, float max_value) {
         return (byte) Math.round(((value / max_value) * 100));
     }
 
     @Unique
-    private boolean the_most_complete_food_mod_1_20_1$canRegenerate(Player pPlayer) {
+    private boolean a_la_carte_1_20_1$canRegenerate(Player pPlayer) {
         return this.proteins >= 5 && this.vitamins > 5 && this.minerals > 5 || pPlayer.level().getDifficulty() == Difficulty.PEACEFUL || !CommonModConfig.ALLOW_NEGATIVE.get();
     }
 
     @Unique
-    private void the_most_complete_food_mod_1_20_1$tick(Player pPlayer) {
+    private void a_la_carte_1_20_1$tick(Player pPlayer) {
         int foodLevel = self().getFoodLevel();
 
         /**
@@ -250,7 +250,7 @@ public abstract class FoodDataMixin implements IDietContainer {
     }
 
     @Unique
-    private void the_most_complete_food_mod_1_20_1$applyEffects(Player pPlayer) {
+    private void a_la_carte_1_20_1$applyEffects(Player pPlayer) {
         if (this.shouldApplyNegativeEffects) {
             if (this.fats < 15) {
                 pPlayer.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN,
@@ -279,7 +279,7 @@ public abstract class FoodDataMixin implements IDietContainer {
             /**
              * Let player eat to restore diet values if he is hit or fiber or fats are low
              */
-            if ((pPlayer.isHurt() && !the_most_complete_food_mod_1_20_1$canRegenerate(pPlayer))
+            if ((pPlayer.isHurt() && !a_la_carte_1_20_1$canRegenerate(pPlayer))
                     && self().getFoodLevel() == 20) {
                 addExhaustion(1.0f);
             }
@@ -332,8 +332,8 @@ public abstract class FoodDataMixin implements IDietContainer {
     @Inject(method = "tick", at = @At(value = "HEAD"))
     private void tick(Player pPlayer, CallbackInfo ci) {
         if (pPlayer.level().getDifficulty() != Difficulty.PEACEFUL && !pPlayer.isCreative()) {
-                the_most_complete_food_mod_1_20_1$tick(pPlayer);
-                the_most_complete_food_mod_1_20_1$applyEffects(pPlayer);
+                a_la_carte_1_20_1$tick(pPlayer);
+                a_la_carte_1_20_1$applyEffects(pPlayer);
         }
     }
 
@@ -348,7 +348,7 @@ public abstract class FoodDataMixin implements IDietContainer {
     //Can't regenerate when proteins, vitamins or minerals are low
     @ModifyVariable(method = "tick", at = @At(value = "STORE", ordinal = 0), ordinal = 0)
     private boolean modifyRegenFlag(boolean originalFlag, Player pPlayer) {
-        return originalFlag && this.the_most_complete_food_mod_1_20_1$canRegenerate(pPlayer);
+        return originalFlag && this.a_la_carte_1_20_1$canRegenerate(pPlayer);
     }
 
     @Inject(method = "eat (Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;)V", at = @At(value = "TAIL"), remap = false)
@@ -412,7 +412,7 @@ public abstract class FoodDataMixin implements IDietContainer {
         }
     }
 
-    public CompoundTag the_most_complete_food_mod_1_20_1$save() {
+    public CompoundTag a_la_carte_1_20_1$save() {
         CompoundTag dietValuesTag = new CompoundTag();
         dietValuesTag.putFloat("Proteins", this.proteins);
         dietValuesTag.putFloat("Fats", this.fats);
@@ -424,7 +424,7 @@ public abstract class FoodDataMixin implements IDietContainer {
         return dietValuesTag;
     }
 
-    public void the_most_complete_food_mod_1_20_1$load(CompoundTag dietValuesTag) {
+    public void a_la_carte_1_20_1$load(CompoundTag dietValuesTag) {
         this.proteins = dietValuesTag.getFloat("Proteins");
         this.fats = dietValuesTag.getFloat("Fats");
         this.carbohydrates = dietValuesTag.getFloat("Carbohydrates");

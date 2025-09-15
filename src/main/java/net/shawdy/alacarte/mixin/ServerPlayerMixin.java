@@ -22,13 +22,13 @@ public class  ServerPlayerMixin {
 
     @Inject(method = "restoreFrom (Lnet/minecraft/server/level/ServerPlayer;Z)V", at = @At(value = "TAIL"))
     public void restoreFrom(ServerPlayer pThat, boolean pKeepEverything, CallbackInfo ci) {
-        CompoundTag old = ((IDietContainer) pThat.getFoodData()).the_most_complete_food_mod_1_20_1$save();
+        CompoundTag old = ((IDietContainer) pThat.getFoodData()).a_la_carte_1_20_1$save();
         if (old != null) {
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod_1_20_1$load(old);
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod$setValue("water", 100.0f);
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$load(old);
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$setValue("water", 100.0f);
             if (CommonModConfig.ALLOW_DEATH_PENALTY.get()) {
                 float penalty = CommonModConfig.DEATH_PENALTY.get().floatValue();
-                ((IDietContainer) self().getFoodData()).the_most_complete_food_mod_1_20_1$applyPenalty(penalty);
+                ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$applyPenalty(penalty);
             }
         }
     }
@@ -36,29 +36,29 @@ public class  ServerPlayerMixin {
     @Inject(method = "drop(Lnet/minecraft/world/item/ItemStack;ZZ)Lnet/minecraft/world/entity/item/ItemEntity;", at = @At(value = "TAIL"))
     private void drop(ItemStack pDroppedItem, boolean pDropAround, boolean pTraceItem, CallbackInfoReturnable<ItemEntity> cir) {
         if (pDroppedItem.getItem() == Items.DIAMOND) {
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod_1_20_1$resetDietContainer();
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$resetDietContainer();
             self().getFoodData().setFoodLevel(20);
             self().getFoodData().setSaturation(20.0f);
         } else
         if(pDroppedItem.getItem() == Items.EMERALD) {
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod$setValue("proteins", 100);
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod$setValue("fats", 100);
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod$setValue("carbohydrates", 100);
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod$setValue("fiber", 100);
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod$setValue("minerals", 100);
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod$setValue("vitamins", 100);
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod$setValue("water", 100);
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$setValue("proteins", 100);
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$setValue("fats", 100);
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$setValue("carbohydrates", 100);
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$setValue("fiber", 100);
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$setValue("minerals", 100);
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$setValue("vitamins", 100);
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$setValue("water", 100);
             self().getFoodData().setFoodLevel(20);
             self().getFoodData().setSaturation(20.0f);
         } else
         if(pDroppedItem.getItem() == Items.COAL) {
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod$setValue("proteins", 0);
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod$setValue("fats", 0);
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod$setValue("carbohydrates", 0);
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod$setValue("fiber", 0);
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod$setValue("minerals", 0);
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod$setValue("vitamins", 0);
-            ((IDietContainer) self().getFoodData()).the_most_complete_food_mod$setValue("water", 0);
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$setValue("proteins", 0);
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$setValue("fats", 0);
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$setValue("carbohydrates", 0);
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$setValue("fiber", 0);
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$setValue("minerals", 0);
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$setValue("vitamins", 0);
+            ((IDietContainer) self().getFoodData()).a_la_carte_1_20_1$setValue("water", 0);
             }
 
     }
