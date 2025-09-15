@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "S": {
+      "tag": "minecraft:wooden_slabs"
+    }
+  },
+  "pattern": [
+    "S S",
+    "P P",
+    " P "
+  ],
+  "result": {
+    "item": "alacarte:mixing_bowl_block"
+  }
+}

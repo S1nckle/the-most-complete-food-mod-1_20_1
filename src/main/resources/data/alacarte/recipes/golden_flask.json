@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "I": {
+      "item": "minecraft:gold_ingot"
+    },
+    "N": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "pattern": [
+    "NIN",
+    "I I",
+    " I "
+  ],
+  "result": {
+    "item": "alacarte:golden_flask"
+  }
+}

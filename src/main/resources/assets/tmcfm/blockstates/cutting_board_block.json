@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "tmcfm:block/cutting_board_block", "y": 180 },
-    "facing=east":  { "model": "tmcfm:block/cutting_board_block", "y": 270 },
-    "facing=south": { "model": "tmcfm:block/cutting_board_block", "y": 0 },
-    "facing=west":  { "model": "tmcfm:block/cutting_board_block", "y": 90 }
-  }
-}

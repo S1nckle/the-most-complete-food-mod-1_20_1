@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "tmcfm:block/frying_pan_block", "y": 0 },
-    "facing=east":  { "model": "tmcfm:block/frying_pan_block", "y": 90 },
-    "facing=south": { "model": "tmcfm:block/frying_pan_block", "y": 180 },
-    "facing=west":  { "model": "tmcfm:block/frying_pan_block", "y": 270 }
-  }
-}

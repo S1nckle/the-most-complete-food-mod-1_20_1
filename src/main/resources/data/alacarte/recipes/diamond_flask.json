@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "B": {
+      "item": "minecraft:brick"
+    }
+  },
+  "pattern": [
+    " B ",
+    "D D",
+    " D "
+  ],
+  "result": {
+    "item": "alacarte:diamond_flask"
+  }
+}

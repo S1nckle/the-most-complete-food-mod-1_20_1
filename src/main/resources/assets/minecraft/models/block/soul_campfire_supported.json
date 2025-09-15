@@ -4,7 +4,7 @@
 	"parent": "block/block",
 	"texture_size": [64, 64],
 	"textures": {
-		"2": "tmcfm:block/support_texture",
+		"2": "alacarte:block/support_texture",
 		"fire": "block/soul_campfire_fire",
 		"lit_log": "block/soul_campfire_log_lit",
 		"log": "block/campfire_log",

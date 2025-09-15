@@ -1,0 +1,16 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "alacarte:item/netherite_flask"
+  },
+  "overrides": [
+    {
+      "predicate": { "damage": 0.0 },
+      "model": "alacarte:item/water_netherite_flask"
+    },
+    {
+      "predicate": { "damage": 1.0 },
+      "model": "alacarte:item/netherite_flask"
+    }
+  ]
+}

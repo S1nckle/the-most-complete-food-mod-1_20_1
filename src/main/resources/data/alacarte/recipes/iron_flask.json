@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "N": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "NIN",
+    "I I",
+    " I "
+  ],
+  "result": {
+    "item": "alacarte:iron_flask"
+  }
+}

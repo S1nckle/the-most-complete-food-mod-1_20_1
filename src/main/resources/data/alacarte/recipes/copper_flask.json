@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "I": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    " I ",
+    "I I",
+    "I I"
+  ],
+  "result": {
+    "item": "alacarte:copper_flask"
+  }
+}

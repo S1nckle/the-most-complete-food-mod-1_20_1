@@ -2,8 +2,8 @@
   "required": true,
   "minVersion": "0.8.5",
   "compatibilityLevel": "JAVA_17",
-  "package": "net.shawdy.themostcompletefoodmod.mixin",
-  "refmap": "themostcompletefoodmod.mixin-refmap.json",
+  "package": "net.shawdy.alacarte.mixin",
+  "refmap": "alacarte.mixin-refmap.json",
   "injectors": {
     "defaultRequire": 1
   },

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "alacarte:block/cutting_board_block", "y": 180 },
+    "facing=east":  { "model": "alacarte:block/cutting_board_block", "y": 270 },
+    "facing=south": { "model": "alacarte:block/cutting_board_block", "y": 0 },
+    "facing=west":  { "model": "alacarte:block/cutting_board_block", "y": 90 }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "gui.alacarted.diet_container_screen.title": "Diet",
+  "gui.alacarte.diet_container_screen.proteins": "Proteins",
+  "gui.alacarte.diet_container_screen.fats": "Fats",
+  "gui.alacarte.diet_container_screen.carbohydrates": "Carbohydrates",
+  "gui.alacarte.diet_container_screen.fiber": "Fiber",
+  "gui.alacarte.diet_container_screen.minerals": "Minerals",
+  "gui.alacarte.diet_container_screen.vitamin": "Vitamins",
+  "gui.alacarte.diet_container_screen.water": "Water",
+
+  "gui.alacarte.diet_container_screen.low_proteins": "Natural regeneration disabled",
+  "gui.alacarte.diet_container_screen.low_fats": "Slowness",
+  "gui.alacarte.diet_container_screen.low_carbohydrates": "Fatigue",
+  "gui.alacarte.diet_container_screen.low_fiber": "Indigestion",
+  "gui.alacarte.diet_container_screen.low_minerals": "Natural regeneration disabled",
+  "gui.alacarte.diet_container_screen.low_vitamins": "Natural regeneration disabled",
+  "gui.alacarte.diet_container_screen.low_water": "Water",
+
+  "gui.alacarte.diet_container_screen.high_proteins": "Strength increased",
+  "gui.alacarte.diet_container_screen.high_fats": "Max health increased",
+  "gui.alacarte.diet_container_screen.high_carbohydrates": "Movement speed increased",
+  "gui.alacarte.diet_container_screen.high_fiber": "Digestion improved",
+  "gui.alacarte.diet_container_screen.high_minerals": "Resistance increased",
+  "gui.alacarte.diet_container_screen.high_vitamins": "Max health increased",
+  "gui.alacarte.diet_container_screen.high_water": "Stay hydrated!",
+
+  "tooltip.alacarte.diet_values.proteins": "proteins",
+  "tooltip.alacarte.diet_values.fats": "fats",
+  "tooltip.alacarte.diet_values.carbohydrates": "carbohydrates",
+  "tooltip.alacarte.diet_values.fiber": "fiber",
+  "tooltip.alacarte.diet_values.minerals": "minerals",
+  "tooltip.alacarte.diet_values.vitamins": "vitamins",
+  "tooltip.alacarte.diet_values.water": "water",
+  "tooltip.alacarte.netherite_flask": "It is said that this flask was\ndeveloped forged by ancient piglin alchemist \nto fullfill their thurst",
+
+  "key.category.alacarte": "The most complete food mod",
+  "key.alacarte.drink": "Drink water",
+
+  "item.alacarte.water_bowl": "Water bowl",
+  "item.alacarte.leather_flask": "Leather flask",
+  "item.alacarte.copper_flask": "Copper flask",
+  "item.alacarte.iron_flask": "Iron flask",
+  "item.alacarte.golden_flask": "Golden flask",
+  "item.alacarte.diamond_flask": "Diamond jar",
+  "item.alacarte.netherite_flask": "Netherite flask",
+  "item.alacarte.caramel_apple": "Caramel apple",
+
+  "block.tmcfm.mixing_bowl_block": "Mixing bowl",
+  "block.alacarte.cooking_pot_block": "Cooking pot",
+  "block.alacarte.frying_pan_block": "Frying pan",
+  "block.alacarte.teapot_block": "Teapot",
+  "block.alacarte.cutting_board_block": "Cutting board",
+
+  "creativetab.alacarte.drinks": "A La Carte Drinks",
+  "creativetab.alacarte.blocks": "A La Carte Blocks",
+  "creativetab.alacarte.edibles": "A La Carte Edibles"
+}

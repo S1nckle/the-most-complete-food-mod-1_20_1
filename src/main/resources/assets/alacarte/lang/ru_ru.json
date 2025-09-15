@@ -1,0 +1,58 @@
+{
+  "gui.alacarted.diet_container_screen.title": "Диета",
+  "gui.alacarte.diet_container_screen.proteins": "Белки",
+  "gui.alacarte.diet_container_screen.fats": "Жиры",
+  "gui.alacarte.diet_container_screen.carbohydrates": "Углеводы",
+  "gui.alacarte.diet_container_screen.fiber": "Клечатка",
+  "gui.alacarte.diet_container_screen.minerals": "Минералы",
+  "gui.alacarte.diet_container_screen.vitamin": "Витамины",
+  "gui.alacarte.diet_container_screen.water": "Вода",
+
+  "gui.alacarte.diet_container_screen.low_proteins": "Естественная регенерация нарушена",
+  "gui.alacarte.diet_container_screen.low_fats": "Медлительность",
+  "gui.alacarte.diet_container_screen.low_carbohydrates": "Усталость",
+  "gui.alacarte.diet_container_screen.low_fiber": "Нарушение пищеварения",
+  "gui.alacarte.diet_container_screen.low_minerals": "Естественная регенерация нарушена",
+  "gui.alacarte.diet_container_screen.low_vitamins": "Естественная регенерация нарушена",
+  "gui.alacarte.diet_container_screen.low_water": "Жажда",
+
+  "gui.alacarte.diet_container_screen.high_proteins": "Урон повышен",
+  "gui.alacarte.diet_container_screen.high_fats": "Здоровье повышено",
+  "gui.alacarte.diet_container_screen.high_carbohydrates": "Скорость увеличена",
+  "gui.alacarte.diet_container_screen.high_fiber": "Пищеварение улучшено",
+  "gui.alacarte.diet_container_screen.high_minerals": "Сопротивляемость увеличена",
+  "gui.alacarte.diet_container_screen.high_vitamins": "Здоровье повышено",
+  "gui.alacarte.diet_container_screen.high_water": "Сохраняй водный баланс!",
+
+  "tooltip.alacarte.diet_values.proteins": "белки",
+  "tooltip.alacarte.diet_values.fats": "жиры",
+  "tooltip.alacarte.diet_values.carbohydrates": "углеводы",
+  "tooltip.alacarte.diet_values.fiber": "клечатка",
+  "tooltip.alacarte.diet_values.minerals": "минералы",
+  "tooltip.alacarte.diet_values.vitamins": "витамины",
+  "tooltip.alacarte.diet_values.water": "вода",
+  "tooltip.alacarte.netherite_flask": "Говорят, эта фляга была\nизобретена и выкована древними\nпиглинами-алхимиками, \nчтобы утолить их жажду",
+
+  "key.category.alacarte": "The most complete food mod",
+  "key.alacarte.drink": "Выпить воды",
+
+  "item.alacarte.water_bowl": "Миска воды",
+  "item.alacarte.leather_flask": "Кожаная фляга",
+  "item.alacarte.copper_flask": "Медная фляга",
+  "item.alacarte.iron_flask": "Железная фляга",
+  "item.alacarte.golden_flask": "Золотая фляга",
+  "item.alacarte.diamond_flask": "Алмазный сосуд",
+  "item.alacarte.netherite_flask": "Незеритовая фляга",
+  "item.alacarte.caramel_apple": "Карамельное яблоко",
+
+  "block.alacarte.mixing_bowl_block": "Миска для смешивания",
+  "block.alacarte.cooking_pot_block": "Котелок",
+  "block.alacarte.frying_pan_block": "Сковорода",
+  "block.alacarte.teapot_block": "Чайник",
+  "block.alacarte.cutting_board_block": "Доска для нарезки",
+
+
+  "creativetab.alacarte.drinks": "A La Carte Напитки",
+  "creativetab.alacarte.blocks": "A La Carte Блоки",
+  "creativetab.alacarte.edibles": "A La Carte Пища"
+}
