@@ -101,7 +101,7 @@ public class TeapotBlockEntity extends BlockEntity implements MenuProvider {
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.tmcfm.teapot_block");
+        return Component.translatable("block.alacarte.teapot_block");
     }
 
     @Override

@@ -72,7 +72,7 @@ public class MixingBowlBlockEntity extends BlockEntity implements MenuProvider {
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.tmcfm.mixing_bowl_block");
+        return Component.translatable("block.alacarte.mixing_bowl_block");
     }
 
     @Override

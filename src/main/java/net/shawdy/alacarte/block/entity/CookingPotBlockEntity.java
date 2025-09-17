@@ -118,7 +118,7 @@ public class CookingPotBlockEntity extends BlockEntity implements MenuProvider {
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.tmcfm.cooking_pot_block");
+        return Component.translatable("block.alacarte.cooking_pot_block");
     }
 
     @Override
