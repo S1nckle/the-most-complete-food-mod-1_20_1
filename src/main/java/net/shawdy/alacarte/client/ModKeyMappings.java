@@ -11,11 +11,11 @@ import org.lwjgl.glfw.GLFW;
 @OnlyIn(Dist.CLIENT)
 public class ModKeyMappings {
     public static final KeyMapping DRINK_WATER = new KeyMapping(
-            "key.tmcfm.drink",
+            "key.alacarte.drink",
             KeyConflictContext.IN_GAME,
             InputConstants.Type.MOUSE,
             GLFW.GLFW_MOUSE_BUTTON_RIGHT,
-            "key.category.tmcfm"
+            "key.category.alacarte"
     );
 
     public static void register(RegisterKeyMappingsEvent pEvent) {

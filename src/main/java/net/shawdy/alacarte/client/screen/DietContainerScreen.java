@@ -28,7 +28,7 @@ import java.util.Optional;
 
 @OnlyIn(Dist.CLIENT)
 public class DietContainerScreen extends Screen {
-    private static final Component TITLE = Component.translatable("gui.tmcfmd.diet_container_screen.title");
+    private static final Component TITLE = Component.translatable("gui.alacarte.diet_container_screen.title");
     private static final ResourceLocation TEXTURE = new ResourceLocation(ALaCarte.MOD_ID, "textures/gui/player_diet_container_gui.png");
     private Byte protein_fullness, fats_fullness, carbohydrates_fullness, fiber_fullness, minerals_fullness, vitamins_fullness, water_fullness;
     private final static ItemStack potion = new ItemStack(Items.POTION);
@@ -93,13 +93,13 @@ public class DietContainerScreen extends Screen {
     }
 
     private void renderStrings(GuiGraphics pGuiGraphics) {
-        pGuiGraphics.drawString(this.font, Component.translatable("gui.tmcfm.diet_container_screen.proteins"), leftPos + 5, topPos + 26, 0x404040, false);
-        pGuiGraphics.drawString(this.font, Component.translatable("gui.tmcfm.diet_container_screen.fats"), leftPos + 92, topPos + 26, 0x404040, false);
-        pGuiGraphics.drawString(this.font, Component.translatable("gui.tmcfm.diet_container_screen.carbohydrates"), leftPos + 5, topPos + 61, 0x404040, false);
-        pGuiGraphics.drawString(this.font, Component.translatable("gui.tmcfm.diet_container_screen.fiber"), leftPos + 92, topPos + 61, 0x404040, false);
-        pGuiGraphics.drawString(this.font, Component.translatable("gui.tmcfm.diet_container_screen.minerals"), leftPos + 5, topPos + 97, 0x404040, false);
-        pGuiGraphics.drawString(this.font, Component.translatable("gui.tmcfm.diet_container_screen.vitamin"), leftPos + 92, topPos + 97, 0x404040, false);
-        pGuiGraphics.drawString(this.font, Component.translatable("gui.tmcfm.diet_container_screen.water"), leftPos + 48, topPos + 133, 0x404040, false);
+        pGuiGraphics.drawString(this.font, Component.translatable("gui.alacarte.diet_container_screen.proteins"), leftPos + 5, topPos + 26, 0x404040, false);
+        pGuiGraphics.drawString(this.font, Component.translatable("gui.alacarte.diet_container_screen.fats"), leftPos + 92, topPos + 26, 0x404040, false);
+        pGuiGraphics.drawString(this.font, Component.translatable("gui.alacarte.diet_container_screen.carbohydrates"), leftPos + 5, topPos + 61, 0x404040, false);
+        pGuiGraphics.drawString(this.font, Component.translatable("gui.alacarte.diet_container_screen.fiber"), leftPos + 92, topPos + 61, 0x404040, false);
+        pGuiGraphics.drawString(this.font, Component.translatable("gui.alacarte.diet_container_screen.minerals"), leftPos + 5, topPos + 97, 0x404040, false);
+        pGuiGraphics.drawString(this.font, Component.translatable("gui.alacarte.diet_container_screen.vitamin"), leftPos + 92, topPos + 97, 0x404040, false);
+        pGuiGraphics.drawString(this.font, Component.translatable("gui.alacarte.diet_container_screen.water"), leftPos + 48, topPos + 133, 0x404040, false);
     }
 
     private void renderItems(GuiGraphics pGuiGraphics) {
@@ -153,51 +153,51 @@ public class DietContainerScreen extends Screen {
         if (isMouseOverProgressBar(pMouseX, pMouseY, this.leftPos + 4, this.topPos + 35)) {
             tooltip.add(Component.literal(this.protein_fullness.toString() + '%').withStyle(ChatFormatting.RED));
             if (this.protein_fullness < 5 && flag && allow_negatives) {
-                tooltip.add(Component.translatable("gui.tmcfm.diet_container_screen.low_proteins").withStyle(ChatFormatting.DARK_GRAY));
+                tooltip.add(Component.translatable("gui.alacarte.diet_container_screen.low_proteins").withStyle(ChatFormatting.DARK_GRAY));
             } else if (this.protein_fullness > 90 && allow_positives) {
-                tooltip.add(Component.translatable("gui.tmcfm.diet_container_screen.high_proteins").withStyle(ChatFormatting.DARK_GRAY));
+                tooltip.add(Component.translatable("gui.alacarte.diet_container_screen.high_proteins").withStyle(ChatFormatting.DARK_GRAY));
             }
         } else if (isMouseOverProgressBar(pMouseX, pMouseY, this.leftPos + 91, this.topPos + 35)) {
             tooltip.add(Component.literal(this.fats_fullness.toString() + '%').withStyle(ChatFormatting.GOLD));
             if (this.fats_fullness < 15 && flag && allow_negatives) {
-                tooltip.add(Component.translatable("gui.tmcfm.diet_container_screen.low_fats").withStyle(ChatFormatting.DARK_GRAY));
+                tooltip.add(Component.translatable("gui.alacarte.diet_container_screen.low_fats").withStyle(ChatFormatting.DARK_GRAY));
             } else if (this.fats_fullness > 90 && allow_positives) {
-                tooltip.add(Component.translatable("gui.tmcfm.diet_container_screen.high_fats").withStyle(ChatFormatting.DARK_GRAY));
+                tooltip.add(Component.translatable("gui.alacarte.diet_container_screen.high_fats").withStyle(ChatFormatting.DARK_GRAY));
             }
         } else if (isMouseOverProgressBar(pMouseX, pMouseY, this.leftPos + 4, this.topPos + 70)) {
             tooltip.add(Component.literal(this.carbohydrates_fullness.toString() + '%').withStyle(ChatFormatting.YELLOW));
             if (this.carbohydrates_fullness < 15 && flag && allow_negatives) {
-                tooltip.add(Component.translatable("gui.tmcfm.diet_container_screen.low_carbohydrates").withStyle(ChatFormatting.DARK_GRAY));
+                tooltip.add(Component.translatable("gui.alacarte.diet_container_screen.low_carbohydrates").withStyle(ChatFormatting.DARK_GRAY));
             } else if (this.carbohydrates_fullness > 90 && allow_positives) {
-                tooltip.add(Component.translatable("gui.tmcfm.diet_container_screen.high_carbohydrates").withStyle(ChatFormatting.DARK_GRAY));
+                tooltip.add(Component.translatable("gui.alacarte.diet_container_screen.high_carbohydrates").withStyle(ChatFormatting.DARK_GRAY));
             }
         } else if (isMouseOverProgressBar(pMouseX, pMouseY, this.leftPos + 91, this.topPos + 70)) {
             tooltip.add(Component.literal(this.fiber_fullness.toString() + '%').withStyle(ChatFormatting.GREEN));
             if (this.fiber_fullness < 10 && flag && allow_negatives) {
-                tooltip.add(Component.translatable("gui.tmcfm.diet_container_screen.low_fiber").withStyle(ChatFormatting.DARK_GRAY));
+                tooltip.add(Component.translatable("gui.alacarte.diet_container_screen.low_fiber").withStyle(ChatFormatting.DARK_GRAY));
             } else if (this.fiber_fullness > 90 && allow_positives) {
-                tooltip.add(Component.translatable("gui.tmcfm.diet_container_screen.high_fiber").withStyle(ChatFormatting.DARK_GRAY));
+                tooltip.add(Component.translatable("gui.alacarte.diet_container_screen.high_fiber").withStyle(ChatFormatting.DARK_GRAY));
             }
         } else if (isMouseOverProgressBar(pMouseX, pMouseY, this.leftPos + 4, this.topPos + 106)) {
             tooltip.add(Component.literal(this.minerals_fullness.toString() + '%').withStyle(ChatFormatting.AQUA));
             if (this.minerals_fullness < 5 && flag && allow_negatives) {
-                tooltip.add(Component.translatable("gui.tmcfm.diet_container_screen.low_minerals").withStyle(ChatFormatting.DARK_GRAY));
+                tooltip.add(Component.translatable("gui.alacarte.diet_container_screen.low_minerals").withStyle(ChatFormatting.DARK_GRAY));
             } else if (this.minerals_fullness > 90 && allow_positives) {
-                tooltip.add(Component.translatable("gui.tmcfm.diet_container_screen.high_minerals").withStyle(ChatFormatting.DARK_GRAY));
+                tooltip.add(Component.translatable("gui.alacarte.diet_container_screen.high_minerals").withStyle(ChatFormatting.DARK_GRAY));
             }
         } else if (isMouseOverProgressBar(pMouseX, pMouseY, this.leftPos + 91, this.topPos + 106)) {
             tooltip.add(Component.literal(this.vitamins_fullness.toString() + '%').withStyle(ChatFormatting.LIGHT_PURPLE));
             if (this.vitamins_fullness < 5 && flag && allow_negatives) {
-                tooltip.add(Component.translatable("gui.tmcfm.diet_container_screen.low_vitamins").withStyle(ChatFormatting.DARK_GRAY));
+                tooltip.add(Component.translatable("gui.alacarte.diet_container_screen.low_vitamins").withStyle(ChatFormatting.DARK_GRAY));
             } else if (this.vitamins_fullness > 90 && allow_positives) {
-                tooltip.add(Component.translatable("gui.tmcfm.diet_container_screen.high_vitamins").withStyle(ChatFormatting.DARK_GRAY));
+                tooltip.add(Component.translatable("gui.alacarte.diet_container_screen.high_vitamins").withStyle(ChatFormatting.DARK_GRAY));
             }
         } else if (isMouseOverProgressBar(pMouseX, pMouseY, this.leftPos + 47, this.topPos + 142)) {
             tooltip.add(Component.literal(this.water_fullness.toString() + '%').withStyle(ChatFormatting.BLUE));
             if (this.water_fullness < 5 && flag && allow_negatives) {
-                tooltip.add(Component.translatable("gui.tmcfm.diet_container_screen.low_water").withStyle(ChatFormatting.DARK_GRAY));
+                tooltip.add(Component.translatable("gui.alacarte.diet_container_screen.low_water").withStyle(ChatFormatting.DARK_GRAY));
             } else if (this.water_fullness > 90 && allow_positives) {
-                tooltip.add(Component.translatable("gui.tmcfm.diet_container_screen.high_water").withStyle(ChatFormatting.DARK_GRAY));
+                tooltip.add(Component.translatable("gui.alacarte.diet_container_screen.high_water").withStyle(ChatFormatting.DARK_GRAY));
             }
         } else return;
         pGuiGraphics.renderTooltip(Minecraft.getInstance().font, tooltip, Optional.empty(), pMouseX, pMouseY);

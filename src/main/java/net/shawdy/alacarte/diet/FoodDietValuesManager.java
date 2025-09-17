@@ -6,6 +6,7 @@ import com.google.gson.JsonParser;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;
+import net.shawdy.alacarte.ALaCarte;
 import org.apache.logging.log4j.LogManager;
 
 import java.io.IOException;
@@ -20,7 +21,7 @@ public class FoodDietValuesManager {
     public static void load(ResourceManager manager) {
         DIET_VALUES.clear();
         try {
-            Optional<Resource> optionalResource = manager.getResource(new ResourceLocation("tmcfm", "food_diet_values.json"));
+            Optional<Resource> optionalResource = manager.getResource(new ResourceLocation(ALaCarte.MOD_ID, "food_diet_values.json"));
 
             if(optionalResource.isEmpty()) {
                 LogManager.getLogger().warn("Diet values are not present!");

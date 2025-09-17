@@ -32,7 +32,7 @@ public class ClientModEvents {
 
     @SubscribeEvent
     public static void onInitGui(ScreenEvent.Init.Post pEvent) {
-        ResourceLocation ICON = new ResourceLocation("tmcfm", "textures/gui/diet_container_button.png");
+        ResourceLocation ICON = new ResourceLocation(ALaCarte.MOD_ID, "textures/gui/diet_container_button.png");
         if (pEvent.getScreen() instanceof InventoryScreen pInventoryScreen) {
             button = new DietContainerButton(
                     ICON,
@@ -71,37 +71,37 @@ public class ClientModEvents {
             if (data.getProteins() != 0) {
                 String modifier = data.getProteins() > 0 ? "+" : "";
                 pToolTip.add(insertpos++, Component.literal(modifier + data.getProteins() + " ").withStyle(ChatFormatting.RED)
-                        .append(Component.translatable("tooltip.tmcfm.diet_values.proteins").withStyle(ChatFormatting.RED)));
+                        .append(Component.translatable("tooltip.alacarte.diet_values.proteins").withStyle(ChatFormatting.RED)));
             }
             if (data.getFats() != 0) {
                 String modifier = data.getFats() > 0 ? "+" : "";
                 pToolTip.add(insertpos++, Component.literal(modifier + data.getFats() + " ").withStyle(ChatFormatting.GOLD)
-                        .append(Component.translatable("tooltip.tmcfm.diet_values.fats").withStyle(ChatFormatting.GOLD)));
+                        .append(Component.translatable("tooltip.alacarte.diet_values.fats").withStyle(ChatFormatting.GOLD)));
             }
             if (data.getCarbohydrates() != 0) {
                 String modifier = data.getCarbohydrates() > 0 ? "+" : "";
                 pToolTip.add(insertpos++, Component.literal(modifier + data.getCarbohydrates() + " ").withStyle(ChatFormatting.YELLOW)
-                        .append(Component.translatable("tooltip.tmcfm.diet_values.carbohydrates").withStyle(ChatFormatting.YELLOW)));
+                        .append(Component.translatable("tooltip.alacarte.diet_values.carbohydrates").withStyle(ChatFormatting.YELLOW)));
             }
             if (data.getFiber() != 0) {
                 String modifier = data.getFiber() > 0 ? "+" : "";
                 pToolTip.add(insertpos++, Component.literal(modifier + data.getFiber() + " ").withStyle(ChatFormatting.DARK_GREEN)
-                        .append(Component.translatable("tooltip.tmcfm.diet_values.fiber").withStyle(ChatFormatting.DARK_GREEN)));
+                        .append(Component.translatable("tooltip.alacarte.diet_values.fiber").withStyle(ChatFormatting.DARK_GREEN)));
             }
             if (data.getMinerals() != 0) {
                 String modifier = data.getMinerals() > 0 ? "+" : "";
                 pToolTip.add(insertpos++, Component.literal(modifier + data.getMinerals() + " ").withStyle(ChatFormatting.AQUA)
-                        .append(Component.translatable("tooltip.tmcfm.diet_values.minerals").withStyle(ChatFormatting.AQUA)));
+                        .append(Component.translatable("tooltip.alacarte.diet_values.minerals").withStyle(ChatFormatting.AQUA)));
             }
             if (data.getVitamins() != 0) {
                 String modifier = data.getVitamins() > 0 ? "+" : "";
                 pToolTip.add(insertpos++, Component.literal(modifier + data.getVitamins() + " ").withStyle(ChatFormatting.LIGHT_PURPLE)
-                        .append(Component.translatable("tooltip.tmcfm.diet_values.vitamins").withStyle(ChatFormatting.LIGHT_PURPLE)));
+                        .append(Component.translatable("tooltip.alacarte.diet_values.vitamins").withStyle(ChatFormatting.LIGHT_PURPLE)));
             }
             if(data.getWater() != 0) {
                 String modifier = data.getWater() > 0 ? "+" : "";
                 pToolTip.add(insertpos++, Component.literal(modifier + data.getWater() + " ").withStyle(ChatFormatting.BLUE)
-                        .append(Component.translatable("tooltip.tmcfm.diet_values.water").withStyle(ChatFormatting.BLUE)));
+                        .append(Component.translatable("tooltip.alacarte.diet_values.water").withStyle(ChatFormatting.BLUE)));
             }
         }
     }
