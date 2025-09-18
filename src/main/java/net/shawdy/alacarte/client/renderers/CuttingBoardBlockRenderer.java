@@ -35,7 +35,8 @@ public class CuttingBoardBlockRenderer implements BlockEntityRenderer<CuttingBoa
 
         pPoseStack.translate(0.5d, 0.08d, 0.5d);
         pPoseStack.mulPose(Axis.ZP.rotationDegrees(90));
-        pPoseStack.mulPose(Axis.XP.rotationDegrees(180));
+        pPoseStack.mulPose(Axis.XP.rotationDegrees(90));
+        pPoseStack.mulPose(Axis.YP.rotationDegrees(90));
 
         pPoseStack.scale(0.6f, 0.6f, 0.6f);
 
