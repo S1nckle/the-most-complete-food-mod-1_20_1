@@ -37,6 +37,9 @@ public class ModCreativeTabs {
                         pOutput.accept(ModItems.DIAMOND_FLASK.get());
                         pOutput.accept(ModItems.NETHERITE_FLASK.get().getDefaultInstance());
                         pOutput.accept(ModItems.NETHERITE_FLASK.get());
+                        pOutput.accept(ModItems.CUP_ITEM.get());
+                        pOutput.accept(ModItems.MUG_ITEM.get());
+                        pOutput.accept(ModItems.BEER_MUG_ITEM.get());
                     })).build());
 
     public static final RegistryObject<CreativeModeTab> ALACARTE_BLOCKS = CREATIVE_MOD_TABS.register("alacarte_blocks",

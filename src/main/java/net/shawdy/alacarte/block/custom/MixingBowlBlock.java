@@ -24,7 +24,7 @@ public class MixingBowlBlock extends Block implements EntityBlock {
         super(pProperties);
     }
 
-    public static final VoxelShape SHAPE = Block.box(4.5, 0, 4.5, 11.5, 4.5, 11.5);
+    public static final VoxelShape SHAPE = Block.box(4, 0, 4, 12, 4.5, 12);
 
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {

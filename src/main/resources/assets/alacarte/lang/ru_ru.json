@@ -43,6 +43,9 @@
   "item.alacarte.golden_flask": "Золотая фляга",
   "item.alacarte.diamond_flask": "Алмазный сосуд",
   "item.alacarte.netherite_flask": "Незеритовая фляга",
+  "item.alacarte.cup": "Чашка",
+  "item.alacarte.mug": "Кружка",
+  "item.alacarte.beer_mug": "Пивная кружка",
   "item.alacarte.caramel_apple": "Карамельное яблоко",
 
   "block.alacarte.mixing_bowl_block": "Миска для смешивания",

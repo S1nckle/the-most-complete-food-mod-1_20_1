@@ -31,12 +31,21 @@ public class ModItems {
             new FlaskItem(FlaskTiers.DIAMOND));
     public static final RegistryObject<Item> NETHERITE_FLASK = ITEMS.register("netherite_flask", () ->
             new FlaskItem(FlaskTiers.NETHERITE));
+
+    public static final RegistryObject<Item> MUG_ITEM = ITEMS.register("mug", () ->
+            new Item(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> CUP_ITEM = ITEMS.register("cup", () ->
+            new Item(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> BEER_MUG_ITEM = ITEMS.register("beer_mug", () ->
+            new Item(new Item.Properties().stacksTo(16)));
+
     public static final RegistryObject<Item> COOKING_POT_ITEM = ITEMS.register("cooking_pot_block", () ->
             new CookingPotBlockItem(ModBlocks.COOKING_POT.get(), new Item.Properties()));
     public static final RegistryObject<Item> FRYING_PAN_ITEM = ITEMS.register("frying_pan_block", () ->
             new FryingPanBlockItem(ModBlocks.FRYING_PAN.get(), new Item.Properties()));
     public static final RegistryObject<Item> TEAPOT_ITEM = ITEMS.register("teapot_block", () ->
             new TeapotBlockItem(ModBlocks.TEAPOT.get(), new Item.Properties()));
+
 
     //Edibles
     public static final RegistryObject<Item> CARAMEL_APPLE = ITEMS.register("caramel_apple",
