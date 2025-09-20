@@ -51,6 +51,7 @@ public class ModCreativeTabs {
                         pOutput.accept(ModItems.FRYING_PAN_ITEM.get());
                         pOutput.accept(ModItems.TEAPOT_ITEM.get());
                         pOutput.accept(ModBlocks.CUTTING_BOARD.get());
+                        pOutput.accept(ModBlocks.FERMENTATION_POT.get());
                     }))).build());
 
 

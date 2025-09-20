@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "facing=north,opened=true": {
+      "model": "alacarte:block/fermentation_pot_open",
+      "y": 0
+    },
+    "facing=east,opened=true": {
+      "model": "alacarte:block/fermentation_pot_open",
+      "y": 90
+    },
+    "facing=south,opened=true": {
+      "model": "alacarte:block/fermentation_pot_open",
+      "y": 180
+    },
+    "facing=west,opened=true": {
+      "model": "alacarte:block/fermentation_pot_open",
+      "y": 270
+    },
+    "facing=north,opened=false": {
+      "model": "alacarte:block/fermentation_pot_closed",
+      "y": 0
+    },
+    "facing=east,opened=false": {
+      "model": "alacarte:block/fermentation_pot_closed",
+      "y": 90
+    },
+    "facing=south,opened=false": {
+      "model": "alacarte:block/fermentation_pot_closed",
+      "y": 180
+    },
+    "facing=west,opened=false": {
+      "model": "alacarte:block/fermentation_pot_closed",
+      "y": 270
+    }
+  }
+}

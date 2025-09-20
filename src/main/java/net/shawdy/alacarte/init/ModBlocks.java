@@ -1,6 +1,7 @@
 package net.shawdy.alacarte.init;
 
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -34,6 +35,8 @@ public class ModBlocks {
             () -> new TeapotBlock(BlockBehaviour.Properties.of().sound(SoundType.DECORATED_POT).strength(0.5F)));
     public static final RegistryObject<Block> CUTTING_BOARD = registerBlock("cutting_board_block",
             () -> new CuttingBoardBlock(BlockBehaviour.Properties.of().strength(0.5F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> FERMENTATION_POT = registerBlock("fermentation_pot_block",
+            () -> new FermentationPotBlock(BlockBehaviour.Properties.copy(Blocks.DECORATED_POT)));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
