@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.SlotItemHandler;
 import net.shawdy.alacarte.block.entity.TeapotBlockEntity;
 import net.shawdy.alacarte.init.ModBlocks;
+import net.shawdy.alacarte.init.ModItems;
 import net.shawdy.alacarte.init.ModMenuTypes;
 import org.jetbrains.annotations.NotNull;
 
@@ -84,7 +85,7 @@ public class TeapotBlockEntityMenu extends AbstractContainerMenu {
     }
 
     private boolean isCup(@NotNull ItemStack stack) {
-        return false;
+        return stack.is(ModItems.CUP_ITEM.get()) || stack.is(ModItems.MUG_ITEM.get());
     }
 
 
