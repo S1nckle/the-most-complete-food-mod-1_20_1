@@ -117,6 +117,7 @@ public class FermentationPotBlockEntity extends BlockEntity {
     public void placeItem(ItemStack pStack) {
         for (int i = 0; i < inventory.getSlots(); i++) {
             if (inventory.getStackInSlot(i).isEmpty()) {
+                if (level != null) level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), Block.UPDATE_ALL);
                 inventory.setStackInSlot(i, pStack);
                 break;
             }
@@ -126,6 +127,7 @@ public class FermentationPotBlockEntity extends BlockEntity {
     public ItemStack removeItem() {
         for (int i = inventory.getSlots() - 1; i >= 0; i--) {
             if (!inventory.getStackInSlot(i).isEmpty()) {
+                if (level != null) level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), Block.UPDATE_ALL);
                 return inventory.getStackInSlot(i).split(1);
             }
         }

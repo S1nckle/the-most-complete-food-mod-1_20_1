@@ -14,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.shawdy.alacarte.ALaCarte;
 import net.shawdy.alacarte.client.ModKeyMappings;
 import net.shawdy.alacarte.client.renderers.CuttingBoardBlockRenderer;
+import net.shawdy.alacarte.client.renderers.FermentationPotBlockRenderer;
 import net.shawdy.alacarte.client.renderers.FryingPanBlockRenderer;
 import net.shawdy.alacarte.client.screen.CookingPotBlockEntityMenuScreen;
 import net.shawdy.alacarte.client.screen.MixingBowlBLockEntityMenuScreen;
@@ -55,6 +56,7 @@ public class ModEvents {
         // register renderers
         BlockEntityRenderers.register(ModBlockEntities.FRYING_PAN_BE.get(), FryingPanBlockRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.CUTTING_BOARD_BE.get(), CuttingBoardBlockRenderer::new);
+        BlockEntityRenderers.register(ModBlockEntities.FERMENTATION_POT_BE.get(), FermentationPotBlockRenderer::new);
 
         // register menus
         MenuScreens.register(ModMenuTypes.COOKING_POT_MENU.get(), CookingPotBlockEntityMenuScreen::new);

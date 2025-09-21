@@ -101,7 +101,10 @@ public class FermentationPotBlock extends Block implements EntityBlock {
             if (pState.getValue(OPENED)) {
                 if (pPlayer.getItemInHand(pHand).is(Items.BUCKET) && pState.getValue(FILLED)) {
                     pLevel.setBlockAndUpdate(pPos, pState.setValue(FILLED, !pState.getValue(FILLED)));
-                    if (!pPlayer.isCreative()) pPlayer.setItemInHand(pHand, new ItemStack(Items.WATER_BUCKET));
+                    if (!pPlayer.isCreative()) {
+                        pPlayer.getItemInHand(pHand).split(1);
+                        pPlayer.addItem(new ItemStack(Items.WATER_BUCKET));
+                    }
                     pLevel.playSound(null, pPos, SoundEvents.BUCKET_FILL, SoundSource.BLOCKS, 1.0F, 1.0F);
                     pLevel.gameEvent(null, GameEvent.FLUID_PICKUP, pPos);
                     return InteractionResult.SUCCESS;

@@ -1,9 +1,9 @@
 {
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
-	"texture_size": [64, 64],
 	"textures": {
 		"0": "alacarte:block/cooking_pot_block_texture",
+		"2": "alacarte:block/water_content",
 		"particle": "alacarte:block/cooking_pot_block_particle"
 	},
 	"elements": [
@@ -73,16 +73,16 @@
 			}
 		},
 		{
-			"from": [4, 6, 4],
-			"to": [12, 6, 12],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, -1, 8]},
+			"from": [4, 7, 4],
+			"to": [12, 7, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
-				"north": {"uv": [9.25, 4.25, 11.25, 4.25], "texture": "#0"},
-				"east": {"uv": [1.5, 9.5, 3.5, 9.5], "texture": "#0"},
-				"south": {"uv": [3.75, 9.5, 5.75, 9.5], "texture": "#0"},
-				"west": {"uv": [9.5, 4.5, 11.5, 4.5], "texture": "#0"},
-				"up": {"uv": [4.25, 8.75, 2.25, 6.75], "texture": "#0"},
-				"down": {"uv": [6.5, 6.75, 4.5, 8.75], "texture": "#0"}
+				"north": {"uv": [0, 0, 8, 0], "texture": "#2"},
+				"east": {"uv": [0, 0, 8, 0], "texture": "#2"},
+				"south": {"uv": [0, 0, 8, 0], "texture": "#2"},
+				"west": {"uv": [0, 0, 8, 0], "texture": "#2"},
+				"up": {"uv": [8, 8, 0, 0], "texture": "#2"},
+				"down": {"uv": [8, 8, 0, 16], "texture": "#2"}
 			}
 		},
 		{
