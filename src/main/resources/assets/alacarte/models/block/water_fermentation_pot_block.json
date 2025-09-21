@@ -1,0 +1,8 @@
+{
+  "parent": "alacarte:block/template_fermentation_pot_block_open_full",
+  "textures": {
+    "0": "alacarte:block/fermentation_pot",
+    "particle": "minecraft:block/terracotta",
+    "content": "alacarte:block/water_content"
+  }
+}

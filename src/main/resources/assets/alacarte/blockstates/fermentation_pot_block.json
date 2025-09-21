@@ -1,34 +1,67 @@
 {
   "variants": {
-    "facing=north,opened=true": {
+    "facing=north,opened=true,filled=false": {
       "model": "alacarte:block/fermentation_pot_open",
       "y": 0
     },
-    "facing=east,opened=true": {
+    "facing=east,opened=true,filled=false": {
       "model": "alacarte:block/fermentation_pot_open",
       "y": 90
     },
-    "facing=south,opened=true": {
+    "facing=south,opened=true,filled=false": {
       "model": "alacarte:block/fermentation_pot_open",
       "y": 180
     },
-    "facing=west,opened=true": {
+    "facing=west,opened=true,filled=false": {
       "model": "alacarte:block/fermentation_pot_open",
       "y": 270
     },
-    "facing=north,opened=false": {
+    "facing=north,opened=false,filled=false": {
       "model": "alacarte:block/fermentation_pot_closed",
       "y": 0
     },
-    "facing=east,opened=false": {
+    "facing=east,opened=false,filled=false": {
       "model": "alacarte:block/fermentation_pot_closed",
       "y": 90
     },
-    "facing=south,opened=false": {
+    "facing=south,opened=false,filled=false": {
       "model": "alacarte:block/fermentation_pot_closed",
       "y": 180
     },
-    "facing=west,opened=false": {
+    "facing=west,opened=false,filled=false": {
+      "model": "alacarte:block/fermentation_pot_closed",
+      "y": 270
+    },
+
+    "facing=north,opened=true,filled=true": {
+      "model": "alacarte:block/water_fermentation_pot_block",
+      "y": 0
+    },
+    "facing=east,opened=true,filled=true": {
+      "model": "alacarte:block/water_fermentation_pot_block",
+      "y": 90
+    },
+    "facing=south,opened=true,filled=true": {
+      "model": "alacarte:block/water_fermentation_pot_block",
+      "y": 180
+    },
+    "facing=west,opened=true,filled=true": {
+      "model": "alacarte:block/water_fermentation_pot_block",
+      "y": 270
+    },
+    "facing=north,opened=false,filled=true": {
+      "model": "alacarte:block/fermentation_pot_closed",
+      "y": 0
+    },
+    "facing=east,opened=false,filled=true": {
+      "model": "alacarte:block/fermentation_pot_closed",
+      "y": 90
+    },
+    "facing=south,opened=false,filled=true": {
+      "model": "alacarte:block/fermentation_pot_closed",
+      "y": 180
+    },
+    "facing=west,opened=false,filled=true": {
       "model": "alacarte:block/fermentation_pot_closed",
       "y": 270
     }

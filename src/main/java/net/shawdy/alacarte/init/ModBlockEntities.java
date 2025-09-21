@@ -31,6 +31,10 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("mixing_bowl_block_entity", () -> BlockEntityType.Builder.of(
                     MixingBowlBlockEntity::new,
                     ModBlocks.MIXING_BOWL.get()).build(null));
+    public static final RegistryObject<BlockEntityType<FermentationPotBlockEntity>> FERMENTATION_POT_BE =
+            BLOCK_ENTITIES.register("fermentation_pot_block_entity", () -> BlockEntityType.Builder.of(
+                    FermentationPotBlockEntity::new,
+                    ModBlocks.FERMENTATION_POT.get()).build(null));
 
     public static void register(IEventBus pEventBus) {
         BLOCK_ENTITIES.register(pEventBus);
