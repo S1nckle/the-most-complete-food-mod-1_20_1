@@ -31,18 +31,17 @@ public class CuttingBoardBlockRenderer implements BlockEntityRenderer<CuttingBoa
 
         pPoseStack.pushPose();
 
-
-
         pPoseStack.translate(0.5d, 0.08d, 0.5d);
-        pPoseStack.mulPose(Axis.ZP.rotationDegrees(270));
-        pPoseStack.mulPose(Axis.YP.rotationDegrees(180));
+
+        Direction facing = pBlockEntity.getBlockState().getValue(CuttingBoardBlock.FACING);
+        pPoseStack.mulPose(Axis.YP.rotationDegrees(facing.toYRot()));
+
+
+        pPoseStack.mulPose(Axis.XP.rotationDegrees(90));
+        pPoseStack.mulPose(Axis.ZP.rotationDegrees(90 *  (2 * ((int) Math.cos(Math.toRadians(facing.toYRot()))))));
 
         pPoseStack.scale(0.6f, 0.6f, 0.6f);
 
-
-
-        Direction facing = pBlockEntity.getBlockState().getValue(CuttingBoardBlock.FACING);
-        pPoseStack.mulPose(Axis.YP.rotationDegrees(-facing.toYRot()));
 
         pItemRenderer.renderStatic(pStack, ItemDisplayContext.FIXED, pPackedLight, pPackedOverlay, pPoseStack,
                 pBuffer, pBlockEntity.getLevel(), 0);
